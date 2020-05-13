@@ -4,7 +4,6 @@ import java.io.BufferedWriter
 import java.io.DataInputStream
 import java.io.EOFException
 import java.io.File
-import java.lang.IllegalArgumentException
 
 class Decoder {
     /**
@@ -54,7 +53,7 @@ class Decoder {
                 word = dictionary[position]
                 dictionary.add(word)
                 writer.write(word)
-            } else throw IllegalArgumentException("Wrong decoded file!")
+            }
         }
     }
 }

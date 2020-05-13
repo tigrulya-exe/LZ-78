@@ -28,7 +28,7 @@ class Encoder {
             DataOutputStream(File(outputFileName).outputStream()).use { outputDataStream ->
                 it.lines().forEach {
                     // кодируем каждую строчку, строчки подгружаются из файла "лениво"
-                    encodeBlock(it, outputDataStream)
+                    encodeBlock(it + "\n", outputDataStream)
                 }
                 flushRemainingBuf(outputDataStream)
             }
