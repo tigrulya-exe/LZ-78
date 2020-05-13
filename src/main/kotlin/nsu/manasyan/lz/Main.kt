@@ -2,6 +2,8 @@ package nsu.manasyan.lz
 
 fun main() {
     val encoder = Encoder()
-    encoder.encodeBlock("abacababacabc")
-    println(encoder.output)
+    encoder.encodeFile("/in.txt", "out.txt")
+
+    val decoder = Decoder()
+    decoder.decodeFile("/out.txt", "decoded.txt")
 }
