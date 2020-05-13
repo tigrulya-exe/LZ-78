@@ -1,5 +1,4 @@
 package nsu.manasyan.lz
 
-fun main() {
-
+class ArgResolver {
 }
