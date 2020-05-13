@@ -16,7 +16,7 @@ class Decoder {
      * Функция декодирования файла и записи результата в outputFileName
      */
     fun decodeFile(inputFileName: String, outputFileName: String) {
-        DataInputStream(Encoder::class.java.getResourceAsStream(inputFileName).buffered()).use { dataInputStream ->
+        DataInputStream(File(inputFileName).inputStream().buffered()).use { dataInputStream ->
             File(outputFileName).outputStream().bufferedWriter().use { writer ->
                 decode(dataInputStream, writer)
             }

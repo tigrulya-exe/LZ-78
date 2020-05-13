@@ -24,7 +24,7 @@ class Encoder {
      * @param outputFileName - имя выходного файла
      */
     fun encodeFile(inputFileName: String, outputFileName: String) {
-        Encoder::class.java.getResourceAsStream(inputFileName).bufferedReader().use {
+        File(inputFileName).bufferedReader().use {
             DataOutputStream(File(outputFileName).outputStream()).use { outputDataStream ->
                 it.lines().forEach {
                     // кодируем каждую строчку, строчки подгружаются из файла "лениво"
